@@ -1,7 +1,6 @@
 #pragma config(Motor,  motor1,          rightMotor,    tmotorVexIQ, openLoop, reversed, encoder)
 #pragma config(Motor,  motor6,          leftMotor,     tmotorVexIQ, openLoop, encoder)
 #pragma config(Motor,  motor7,          leftMotor2,    tmotorVexIQ, openLoop, encoder)
-#pragma config(Motor,  motor8,          clawMotor,     tmotorVexIQ, PIDControl, encoder)
 #pragma config(Motor,  motor10,         armMotor,      tmotorVexIQ, openLoop, encoder)
 #pragma config(Motor,  motor11,         armMotor2,     tmotorVexIQ, openLoop, reversed, encoder)
 #pragma config(Motor,  motor12,         rightMotor2,   tmotorVexIQ, openLoop, reversed, encoder)
@@ -74,19 +73,19 @@ task main()
 		}
 
 		////If Button "L-Up" is pressed in, we'll set the arm motor to run in reverse.
-		if(getJoystickValue(BtnRUp) == 1)
-		{
-			setMotorSpeed(clawMotor, 127);
-		}
+		//if(getJoystickValue(BtnRUp) == 1)
+		//{
+			//setMotorSpeed(clawMotor, 127);
+		//}
 		//If the "L-Up" isn't pressed, but "L-Down" is, we'll set the motor to run forward.
-		else if(getJoystickValue(BtnRDown) == 1)
-		{
-			setMotorSpeed(clawMotor, -127);
-		}
-		else	//If neither button is pressed, we'll set the motor off.
-		{
-			setMotorSpeed(clawMotor, 0);
-		}
+		//else if(getJoystickValue(BtnRDown) == 1)
+		//{
+			//setMotorSpeed(clawMotor, -127);
+		//}
+		//else	//If neither button is pressed, we'll set the motor off.
+		//{
+			//setMotorSpeed(clawMotor, 0);
+		//}
 
 		//if(getJoystickValue(BtnFUp) == 1)
 		//{
